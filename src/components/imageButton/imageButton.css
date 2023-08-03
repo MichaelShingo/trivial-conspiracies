@@ -1,0 +1,333 @@
+.image-container { 
+    position: relative;
+    transition: filter .5s ease-in-out;
+    cursor: pointer;
+  }
+
+.image-container:hover {
+    filter: brightness(150%);
+    
+
+}
+#title-image {
+    width: 50%;
+    margin: auto;
+}
+
+@keyframes jitterAnimation {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(2px, -2px);
+    }
+    50% {
+      transform: translate(-3px, 1px);
+    }
+    75% {
+      transform: translate(1px, 3px);
+    }
+  }
+
+#phone {
+    transform: rotate(40deg) translateY(0px);
+    position: relative;
+    top: 7vw;
+    right: 1vw;
+    animation: phone-inactive 2s linear infinite alternate;
+}
+
+#phone:hover {
+    animation-play-state: paused;
+}
+
+@keyframes phone-inactive {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+#phone img {
+    width: 60%;
+}
+
+#freeTime {
+    position: relative;
+    left: 9vw;
+    top: 3vh;
+    animation: freetime-inactive 9s linear infinite alternate;
+}
+
+@keyframes freetime-inactive {
+    0%, 100% {
+        filter: blur(0px);
+    }
+    30% {
+        filter: blur(3px);
+    }
+    50% {
+        filter: blur(0px);
+    }
+    60% {
+        filter: blur(0px);
+    }
+    65% {
+        filter: blur(4px);
+    }
+    62% {
+        filter: blur(2px);
+    }
+    75% {
+        filter: blur(2px);
+    }
+    80% {
+        filter: blur(4px);
+    }
+    85% {
+        filter: blur(0px);
+    }
+
+
+}
+
+#freeTime:hover {
+    animation-play-state: paused;
+}
+
+#freeTime img {
+    width: 70%;
+}
+
+#pizza {
+    position: relative;
+    right: 3vw;
+    bottom: 7vw;
+    animation: pizza-inactive 5s ease-in-out infinite alternate;
+}
+
+#pizza:hover {
+    animation-play-state: paused;
+}
+
+#pizza img { 
+    width: 90%;
+}
+@keyframes pizza-inactive {
+    0% {
+        transform: rotate3d(5, 1, 1, 0deg);
+    }
+    100% {
+        transform: rotate3d(5, 1, 1, 30deg);
+    }
+}
+
+#party {
+    position: relative;
+    transform: rotate(5deg);
+    right: 0vw;
+    bottom: 2vw;
+    animation: jitterAnimation 5s infinite;
+
+}
+
+#party:hover {
+    animation-play-state: paused;
+}
+
+#party img { 
+    width: 130%;
+}
+
+#pidgeon {
+    position: relative;
+    left: 7vw;
+    bottom: 7vw;
+    animation: pidgeon-inactive 16s ease-in infinite forwards;
+
+}
+
+#pidgeon:hover {
+    animation-play-state: paused;
+}
+
+@keyframes pidgeon-inactive {
+    0%, 100% {
+        transform: rotate(0deg) translateY(0px);;
+    }
+    30% {
+        transform: rotate(20deg) translateY(0px);;
+    }
+    50% {
+        transform: rotate(20deg) translateY(0px);;
+    }
+    51% {
+        transform: rotate(20deg) translateY(-5px);
+    }
+    52% {
+        transform: rotate(20deg) translateY(0px);
+    }
+
+
+    53% {
+        transform: rotate(20deg) translateY(0px);;
+    }
+    54% {
+        transform: rotate(20deg) translateY(-5px);
+    }
+    55% {
+        transform: rotate(20deg) translateY(0px);
+    }
+    
+    70% {
+        transform: rotate(20deg) translateY(0px);
+    }
+
+}
+
+#pidgeon img { 
+    width: 80%;
+    transform: rotate(-15deg);
+}
+
+#nectarine {
+    position: relative;
+    transform: rotate(10deg);
+    left: 8vw;
+    top: 1vw;
+    animation: nectarine-inactive 10s ease-in infinite alternate;
+}
+
+@keyframes nectarine-inactive {
+    
+}
+
+#nectarine:hover {
+    animation-play-state: paused;
+}
+
+#nectarine img { 
+    width: 55%;
+}
+
+#buddha {
+    position: relative;
+    left: 2vw;
+    bottom: 5vw;
+    animation: buddha-inactive 7s ease-out infinite forwards;
+}
+#buddha:hover {
+    animation-play-state: paused;
+}
+#buddha img {
+    width: 85%;
+}
+@keyframes buddha-inactive {
+    0% {
+        transform: rotate(0deg);
+    }
+    5% {
+        transform: rotate(0deg);
+    }
+    8% {
+        transform: rotate(3deg);
+    }
+    14% {
+        transform: rotate(-3deg);
+    }
+    20% {
+        transform: rotate(3deg);
+    }
+    23% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+    
+}
+
+#shampoo {
+    position: relative;
+    left: 2vw;
+}
+
+#shampoo:hover {
+    animation-play-state: paused;
+}
+#shampoo img {
+    width: 70%;
+}
+
+#blueman {
+    position: relative;
+    left: 12vw;
+
+}
+#blueman:hover {
+    animation-play-state: paused;
+}
+#blueman img {
+    width: 105%;
+}
+
+#giveup {
+    position: relative;
+    left: 15vw;
+    top: 5vw;
+    animation: giveup-inactive 6s linear infinite forwards;
+}
+#giveup:hover {
+    animation-play-state: paused;
+}
+#giveup img {
+    width: 40%;
+}
+
+@keyframes giveup-inactive {
+    0% {
+        filter: brightness(100%);
+    }
+    30% {
+        filter: brightness(100%);
+    }
+    31% {
+        filter: brightness(150%);
+    }
+    32% {
+        filter: brightness(100%);
+    }
+    33% {
+        filter: brightness(100%);
+    }
+    34% {
+        filter: brightness(150%);
+    }
+    35% {
+        filter: brightness(100%);
+    }
+    65% {
+        filter: brightness(100%);
+    }
+    66% {
+        filter: brightness(150%);
+    }
+    67% {
+        filter: brightness(100%);
+    }
+    95% {
+        filter: brightness(100%);
+    }
+    96% {
+        filter: brightness(150%);
+    }
+    97% {
+        filter: brightness(100%);
+    }
+    100% {
+        filter: brightness(100%);
+    }
+
+}

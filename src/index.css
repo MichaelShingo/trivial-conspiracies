@@ -1,13 +1,115 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Remove default margin and padding */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
 }
+
+/* Remove list styles (bullets/numbers) */
+ol,
+ul {
+  list-style: none;
+}
+
+/* Remove hyperlink styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Set base font size and line height */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Remove the outline for focusable elements */
+button,
+input,
+select,
+textarea {
+  outline: none;
+}
+
+#page-background {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  /* transition: 1s ease-in; */
+}
+
+#row-2 {
+  margin-left: 25%;
+  margin-top: 3vw;
+}
+
+#row-3 {
+  margin-top: -7vw;
+  justify-content: space-evenly !important;
+  position: relative;
+  /* top: calc(100vw / 10vw); */
+}
+
+.animate-out {
+  animation: image-out 2.5s ease-in-out 0s 1 forwards;
+  pointer-events: none;
+
+}
+
+.animate-in {
+  opacity: 0;
+  animation: image-in 2.5s ease-in-out 1s 1 forwards;
+  pointer-events: all;
+
+}
+
+@keyframes image-out {
+  0% {
+    transform: scale(100%);
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    transform: scale(75%);
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@keyframes image-in {
+  0% {
+    transform: scale(75%);
+    opacity: 0;
+    
+  }
+  100% {
+    transform: scale(100%);
+    opacity: 1;
+  }
+}
+
+
+/* media query for overflow-y if screen height is less than x */

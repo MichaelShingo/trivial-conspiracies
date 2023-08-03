@@ -1,0 +1,40 @@
+.video-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    overflow: hidden;
+    margin: 0;
+    backdrop-filter: blur(100px);
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    /* transition: opacity 2s; */
+    /* transition-delay: 1s; */
+}
+
+.video-container iframe {
+    width: 120%;
+    height: 100%;
+    /* margin: -20px 0px 0px -20px; */
+}
+
+.video-visible {
+    /* opacity: 1 !important; */
+    animation: fade-in-video 1s ease-in-out 2s 1 forwards;
+}
+
+.video-invisible {
+    animation: fade-out-video 1s ease-in-out 0s 1 forwards;
+}
+
+@keyframes fade-in-video {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
+}
+
+@keyframes fade-out-video {
+    0% {opacity: 100%;}
+    100% {opacity: 0%;}
+}
