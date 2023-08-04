@@ -33,11 +33,11 @@ function App() {
           handleVideoClose={handleVideoClose}
         />
         <div id="title-container" className={imagesVisible ? 'flex-row animate-in' : 'flex-row animate-out'}>
-          <ImageButton 
+          {/* <ImageButton 
             id="freeTime"
             source={freeTime}
             handleImageClick={handleImageClick}
-          />
+          /> */}
           <img id="title-image" src={title}/>
           <ImageButton
             id="phone"
