@@ -2,7 +2,16 @@
     position: relative;
     transition: filter .5s ease-in-out;
     cursor: pointer;
+    margin: auto;
+    background-color: rgba(255, 251, 0, 0.486);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+
+.image-container img {
+    margin: auto;
+}
 
 .image-container:hover {
     filter: brightness(150%);
@@ -48,8 +57,8 @@
 #phone {
     transform: rotate(40deg) translateY(0px);
     position: relative;
-    top: 7vw;
-    right: 1vw;
+    /* top: 7vw;
+    right: 1vw; */
     animation: phone-inactive 2s linear infinite alternate;
 }
 
@@ -72,8 +81,9 @@
 
 #freetime {
     position: relative;
-    left: 9vw;
-    top: 3vh;
+
+    /* left: 9vw;
+    top: 3vh; */
     animation: jitterAnimation 8s linear infinite alternate;
 }
 
@@ -135,8 +145,8 @@
 
 #pizza {
     position: relative;
-    right: 3vw;
-    bottom: 7vw;
+    /* right: 3vw;
+    bottom: 7vw; */
     animation: pizza-inactive 5s ease-in-out infinite alternate;
 }
 
@@ -159,8 +169,8 @@
 #party {
     position: relative;
     transform: rotate(5deg);
-    right: 0vw;
-    bottom: 2vw;
+    /* right: 0vw;
+    bottom: 2vw; */
     animation: jitterAnimation 5s infinite;
 
 }
@@ -175,8 +185,8 @@
 
 #pigeon {
     position: relative;
-    left: 7vw;
-    bottom: 7vw;
+    /* left: 7vw;
+    bottom: 7vw; */
     animation: pigeon-inactive 16s ease-in infinite forwards;
 
 }
@@ -227,8 +237,8 @@
 #nectarine {
     position: relative;
     transform: rotate(10deg);
-    left: 8vw;
-    top: 1vw;
+    /* left: 8vw;
+    top: 1vw; */
     animation: nectarine-inactive 3s ease-in infinite alternate;
 }
 
@@ -251,8 +261,8 @@
 
 #buddha {
     position: relative;
-    left: 2vw;
-    bottom: 5vw;
+    /* left: 2vw;
+    bottom: 5vw; */
     animation: buddha-inactive 7s ease-out infinite forwards;
 }
 #buddha:hover {
@@ -288,7 +298,7 @@
 
 #shampoo {
     position: relative;
-    left: 2vw;
+    /* left: 2vw; */
     animation: shampoo-inactive 7s ease-in infinite forwards;
     transform-origin: center;
 
@@ -331,20 +341,22 @@
 
 #blueman {
     position: relative;
-    left: 12vw;
+    width: 18%;
+    /* left: 12vw; */
 
 }
 #blueman:hover {
     animation-play-state: paused;
 }
 #blueman img {
-    width: 105%;
+    width: 100%;
 }
 
 #giveup {
     position: relative;
-    left: 15vw;
-    top: 5vw;
+    width: 40%;
+    /* left: 15vw; */
+    /* top: 5vw; */
     animation: giveup-inactive 6s linear infinite forwards;
 }
 #giveup:hover {
@@ -354,6 +366,7 @@
 }
 #giveup img {
     width: 40%;
+    height: 40%;
 }
 
 @keyframes giveup-inactive {
@@ -404,7 +417,7 @@
 
 .eyes {
     position: absolute;
-    width: 3.4vw !important;
+    width: 25% !important;
     
 }
 
