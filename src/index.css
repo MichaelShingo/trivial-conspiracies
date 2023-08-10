@@ -1,8 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
 /* Box sizing rules */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  font-family: 'Gochi Hand';
+  font-size: 20px;
+}
+
+button {
+  display: inline;
+  border: none;
+  margin: 0;
+  text-decoration: none;
+  background: none;
+  font-family: sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+}
+
+
+
+button:focus {
+  outline: none;
+  outline-offset: none;
+}
+
+button:active {
+  background: none;
+  background-color: none;
+  border: none;
+}
+
+
+:root {
+  --color-gold: #af9f82;
+  --color-highlight: #352507;
+  --color-gold-hover: #ece1cd;
+  --default-transition: all 0.5s ease-in-out;
+  --color-grey-1: #ebe7dc;
+  --color-gold-dark-1: #746a57;
+  
+  --color-gold-dark-2: #3d382e;
+  
+  
+}
+
+::selection {
+  background: var(--color-highlight);
+  border-radius: 50%;
+  color: var(--color-grey-1);
+  transition: var(--default-transition);
+}
+
+p {
+  transition: var(--default-transition);
 }
 
 /* Remove default margin and padding */
@@ -51,7 +108,8 @@ textarea {
   background-color: black;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .flex-row {
@@ -67,7 +125,7 @@ textarea {
 }
 
 #row-3 {
-  margin-top: -7vw;
+  margin-top: -11vw;
   justify-content: space-evenly !important;
   position: relative;
   /* top: calc(100vw / 10vw); */
@@ -85,6 +143,20 @@ textarea {
   pointer-events: all;
 
 }
+
+
+#question-container {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 200px;
+}
+
+#question-container img {
+  height: 100%;
+  width: 100%;
+}
+
 
 @keyframes image-out {
   0% {
@@ -111,5 +183,13 @@ textarea {
   }
 }
 
+@keyframes fade-in-video {
+  0% {opacity: 0%;}
+  100% {opacity: 100%;}
+}
 
+@keyframes fade-out-video {
+  0% {opacity: 100%;}
+  100% {opacity: 0%;}
+}
 /* media query for overflow-y if screen height is less than x */

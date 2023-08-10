@@ -2,7 +2,6 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    z-index: 0;
     overflow: hidden;
     margin: 0;
     backdrop-filter: blur(100px);
@@ -29,12 +28,19 @@
     animation: fade-out-video 1s ease-in-out 0s 1 forwards;
 }
 
-@keyframes fade-in-video {
-    0% {opacity: 0%;}
-    100% {opacity: 100%;}
+.close-button-video {
+    right: 10px;
+    fill: var(--color-gold);
+    position: fixed;
+    width: 2.5%;
+    top: 10px;
+    transition: var(--default-transition);
 }
 
-@keyframes fade-out-video {
-    0% {opacity: 100%;}
-    100% {opacity: 0%;}
+.close-button-video:hover {
+    fill: var(--color-gold-hover);
+    cursor: pointer;
 }
+
+
+

@@ -1,28 +1,54 @@
 import './videoView.css';
 import { useEffect, useRef } from 'react';
+import { ReactComponent as XMark } from '../../img/xmark.svg';
 
-const VideoView = ({ imagesVisible, handleVideoClose }) => {
+
+const VideoView = ({ imagesVisible, handleVideoClose, activeVideo, videoVisible }) => {
+    const urls = {
+        'pigeon': 'https://player.vimeo.com/video/851271429?h=bcb0ee5552',
+        'pizza': 'https://player.vimeo.com/video/851279767?h=6e40d55f89',
+        'shampoo': 'https://player.vimeo.com/video/851304276?h=5acd331cc4',
+        'phone': 'https://player.vimeo.com/video/851254778?h=bb680bc7fb',
+        'nectarine': 'https://player.vimeo.com/video/851247696?h=63689ebec5',
+        'giveup': 'https://player.vimeo.com/video/851238051?h=65db242736',
+        'freetime': 'https://player.vimeo.com/video/851227015?h=a75ee1966e',
+        'buddha': 'https://player.vimeo.com/video/851226906?h=39dc35f80a',
+        'blueman': 'https://player.vimeo.com/video/851209818?h=efa4038ec8',
+        'party': 'https://player.vimeo.com/video/549004118',
+        'pause': ''
+    }
+
 
     const containerRef = useRef(null);
+    const iframeRef = useRef(null);
+
     useEffect(() => {
         setTimeout(() => {
             containerRef.current.style.visibility = 'visible';
         }, 1000)
         
     }, [])
+
+
+    
     return ( 
         <div 
             ref={containerRef}
-            className={imagesVisible ? 'video-container video-invisible' : 'video-container video-visible'}
-            styles={{transitionDelay: imagesVisible ? '1s' : '1s'}}
+            className={videoVisible ? 'video-container video-visible' : 'video-container video-invisible'}
+            style={{
+                transitionDelay: videoVisible ? '1s' : '1s',
+                zIndex: videoVisible ? '1' : '-1'
+            }}
         >
-            <button
+            <XMark 
                 onClick={handleVideoClose}
-            
-            >X</button>
+                className="close-button-video"
+
+            />
+  
             <iframe 
-                src="https://player.vimeo.com/video/540715699?h=95a77dade9" 
-              
+                ref={iframeRef}
+                src={urls[activeVideo]} 
                 frameborder="0" 
                 allow="autoplay; fullscreen; picture-in-picture" 
                 allowfullscreen>

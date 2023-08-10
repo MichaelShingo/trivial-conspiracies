@@ -1,14 +1,15 @@
 import './imageButton.css';
 
-const ImageButton = ({source, id, handleImageClick}) => {
+const ImageButton = ({source, id, handleImageClick, children }) => {
     
     return ( 
         <div 
             id={id}
-            onClick={handleImageClick}
+            onClick={() => handleImageClick(id)}
             className="image-container"
         >
             <img src={source}/>
+            {children}
         </div>
      );
 }

@@ -12,22 +12,38 @@
 #title-image {
     width: 50%;
     margin: auto;
+    animation: wobble 2s ease-in-out infinite alternate;
+
 }
 
-@keyframes jitterAnimation {
-    0%, 100% {
-      transform: translate(0, 0);
+#title-image:hover {
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+@keyframes wobble {
+    0% {
+      transform: rotate(0) translateY(0px);
     }
-    25% {
-      transform: translate(2px, -2px);
+    20% {
+      transform: rotate(-.2deg);
     }
-    50% {
-      transform: translate(-3px, 1px);
+    40% {
+        transform: rotate(.2deg) translateY(-1px);
     }
-    75% {
-      transform: translate(1px, 3px);
+    60% {
+        transform: rotate(-.2deg);
+      }
+    80% {
+        transform: rotate(.2deg) translateY(.5px);
     }
-  }
+    100% {
+        transform: rotate(-.2deg);
+      }
+   
+    
+}
+
 
 #phone {
     transform: rotate(40deg) translateY(0px);
@@ -54,14 +70,30 @@
     width: 60%;
 }
 
-#freeTime {
+#freetime {
     position: relative;
     left: 9vw;
     top: 3vh;
-    animation: freetime-inactive 9s linear infinite alternate;
+    animation: jitterAnimation 8s linear infinite alternate;
 }
 
-@keyframes freetime-inactive {
+
+@keyframes jitterAnimation {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(1px, -1px);
+    }
+    50% {
+      transform: translate(-1.5px, .5px);
+    }
+    75% {
+      transform: translate(.5px, 1.5px);
+    }
+  }
+
+@keyframes blur-wobble {
     0%, 100% {
         filter: blur(0px);
     }
@@ -93,11 +125,11 @@
 
 }
 
-#freeTime:hover {
+#freetime:hover {
     animation-play-state: paused;
 }
 
-#freeTime img {
+#freetime img {
     width: 70%;
 }
 
@@ -141,19 +173,19 @@
     width: 130%;
 }
 
-#pidgeon {
+#pigeon {
     position: relative;
     left: 7vw;
     bottom: 7vw;
-    animation: pidgeon-inactive 16s ease-in infinite forwards;
+    animation: pigeon-inactive 16s ease-in infinite forwards;
 
 }
 
-#pidgeon:hover {
+#pigeon:hover {
     animation-play-state: paused;
 }
 
-@keyframes pidgeon-inactive {
+@keyframes pigeon-inactive {
     0%, 100% {
         transform: rotate(0deg) translateY(0px);;
     }
@@ -187,7 +219,7 @@
 
 }
 
-#pidgeon img { 
+#pigeon img { 
     width: 80%;
     transform: rotate(-15deg);
 }
@@ -197,11 +229,16 @@
     transform: rotate(10deg);
     left: 8vw;
     top: 1vw;
-    animation: nectarine-inactive 10s ease-in infinite alternate;
+    animation: nectarine-inactive 3s ease-in infinite alternate;
 }
 
 @keyframes nectarine-inactive {
-    
+    0% {
+        transform: skew(0deg, 0deg);
+    }
+    100% {
+        transform: skewX(5deg);
+    }
 }
 
 #nectarine:hover {
@@ -252,6 +289,9 @@
 #shampoo {
     position: relative;
     left: 2vw;
+    animation: shampoo-inactive 7s ease-in infinite forwards;
+    transform-origin: center;
+
 }
 
 #shampoo:hover {
@@ -259,6 +299,34 @@
 }
 #shampoo img {
     width: 70%;
+}
+
+@keyframes shampoo-inactive {
+    0% {
+        transform: scale(100%, 100%) translate(0px, 0px);
+    }
+    50% {
+        transform: scale(100%, 100%) translate(0px, 0px);
+    }
+    51% {
+        transform: scale(95%, 110%) translate(-1px, -4px);
+    }
+    52% {
+        transform: scale(100%, 100%) translate(-1px, -4px);
+    }
+    53% {
+        transform: scale(95%, 110%) translate(-3px, -8px);
+    }
+    56% {
+        transform: scale(100%, 100%) translate(-3px, -8px);
+    }
+    85% {
+        transform: scale(100%, 100%) translate(-3px, -8px);
+    }
+    100% {
+        transform: scale(100%, 100%) translate(0px, 0px);
+
+    }
 }
 
 #blueman {
@@ -281,6 +349,8 @@
 }
 #giveup:hover {
     animation-play-state: paused;
+    filter: brightness(150%);
+
 }
 #giveup img {
     width: 40%;
@@ -331,3 +401,73 @@
     }
 
 }
+
+.eyes {
+    position: absolute;
+    width: 3.4vw !important;
+    
+}
+
+#eye1 {
+    top: 22%;
+    left: 18%;
+    transform: rotate(13deg);
+    animation: eye1 5s linear infinite forwards;
+}
+
+@keyframes eye1 {
+    0% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 1;
+    }
+    41% {
+        opacity: .4;
+    }
+    42% {
+        opacity: 1;
+    }
+    45% {
+        opacity: 1;
+    }
+    46% {
+        opacity: .4;
+    }
+    47% {
+        opacity: 1;
+    }
+}
+
+
+
+#eye2 {
+    top: 40%;
+    left: 62%;
+    transform: rotate(-13deg);
+    animation: eye2 4.5s linear infinite forwards;
+}
+
+
+@keyframes eye2 {
+    0% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    76% {
+        opacity: .4;
+    }
+    77% {
+        opacity: 1;
+    }
+}
+
+/* #question {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 20%;
+
+} */

@@ -1,0 +1,61 @@
+::-webkit-scrollbar {
+    width: .7em;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-black);
+    border-radius: 100vw;
+    margin-block: .5em;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-gold-dark-1);
+    border-radius: 100vw;
+    box-shadow: inset 0px 0px 0px 5px #000000, 0px 0px 0px 1px #000000;
+    border: 2px solid var(--color-black);
+}
+
+::-webkit-scroll-thumb:hover {
+    background: var(--color-gold-hover);
+}
+
+
+#interview-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+#interview-selectors {
+    width: fit-content;
+}
+
+#interview-selectors button, #interview-selectors button:active, #interview-selectors button:focus {
+    background-color: none;
+    background: none;
+    color: var(--color-gold);
+    font-family: inherit;
+    font-size: 200%;
+    transition: color 1s ease-out, transform 0.5s ease-out;
+    margin: 0px 5px;
+}
+
+#interview-selectors button:hover {
+    background: none;
+    transform: scale(115%) !important;
+    /* box-shadow: 1px 1px 1px white; */
+    color: var(--color-gold-hover) !important;
+}
+
+@keyframes interview-transition {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
