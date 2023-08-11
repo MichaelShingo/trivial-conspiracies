@@ -2,15 +2,16 @@
     position: relative;
     transition: filter .5s ease-in-out;
     cursor: pointer;
-    margin: auto;
-    background-color: rgba(255, 251, 0, 0.486);
+    /* margin: auto; */
+    /* background-color: rgba(255, 251, 0, 0.486); */
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 100%;
   }
 
 .image-container img {
-    margin: auto;
 }
 
 .image-container:hover {
@@ -19,10 +20,15 @@
 
 }
 #title-image {
-    width: 50%;
-    margin: auto;
+    /* margin: auto; */
+    grid-column: 5 / 17;
+    width: 90%;
     animation: wobble 2s ease-in-out infinite alternate;
 
+}
+
+#title-image img {
+    width: 100%;
 }
 
 #title-image:hover {
@@ -55,8 +61,8 @@
 
 
 #phone {
-    transform: rotate(40deg) translateY(0px);
     position: relative;
+    grid-column: 17 / 21;
     /* top: 7vw;
     right: 1vw; */
     animation: phone-inactive 2s linear infinite alternate;
@@ -76,14 +82,15 @@
 }
 
 #phone img {
-    width: 60%;
+    transform: rotate(40deg) translateX(-10%) translateY(35%);
+
+    width: 65%;
 }
+
 
 #freetime {
     position: relative;
-
-    /* left: 9vw;
-    top: 3vh; */
+    grid-column: 1 / span 4;
     animation: jitterAnimation 8s linear infinite alternate;
 }
 
@@ -103,47 +110,30 @@
     }
   }
 
-@keyframes blur-wobble {
-    0%, 100% {
-        filter: blur(0px);
-    }
-    30% {
-        filter: blur(3px);
-    }
-    50% {
-        filter: blur(0px);
-    }
-    60% {
-        filter: blur(0px);
-    }
-    65% {
-        filter: blur(4px);
-    }
-    62% {
-        filter: blur(2px);
-    }
-    75% {
-        filter: blur(2px);
-    }
-    80% {
-        filter: blur(4px);
-    }
-    85% {
-        filter: blur(0px);
-    }
 
-
-}
 
 #freetime:hover {
     animation-play-state: paused;
 }
 
 #freetime img {
-    width: 70%;
+    width: 75%;
+    transform: translateY(10%);
 }
 
+#question {  
+    width: 100%;
+    grid-column: 1 / 5;
+} 
+
+#question img {
+    width: 100%;
+    transform: translateX(25%) rotate(-10deg);
+}
+
+
 #pizza {
+    grid-column: 5 / 9;
     position: relative;
     /* right: 3vw;
     bottom: 7vw; */
@@ -155,7 +145,8 @@
 }
 
 #pizza img { 
-    width: 90%;
+    width: 75%;
+    transform: translateY(-30%);
 }
 @keyframes pizza-inactive {
     0% {
@@ -169,8 +160,7 @@
 #party {
     position: relative;
     transform: rotate(5deg);
-    /* right: 0vw;
-    bottom: 2vw; */
+    grid-column: 9 / 13;
     animation: jitterAnimation 5s infinite;
 
 }
@@ -181,12 +171,12 @@
 
 #party img { 
     width: 130%;
+    transform: translateY(10%);
 }
 
 #pigeon {
     position: relative;
-    /* left: 7vw;
-    bottom: 7vw; */
+    grid-column: 13 / 17;
     animation: pigeon-inactive 16s ease-in infinite forwards;
 
 }
@@ -230,13 +220,14 @@
 }
 
 #pigeon img { 
-    width: 80%;
-    transform: rotate(-15deg);
+    width: 67%;
+    transform:  rotate(-15deg) translateY(-30%) translateX(5%);
 }
 
 #nectarine {
     position: relative;
     transform: rotate(10deg);
+    grid-column: 17 / 21;
     /* left: 8vw;
     top: 1vw; */
     animation: nectarine-inactive 3s ease-in infinite alternate;
@@ -256,20 +247,21 @@
 }
 
 #nectarine img { 
-    width: 55%;
+    width: 80%;
+    transform: rotate(12deg);
 }
 
 #buddha {
     position: relative;
-    /* left: 2vw;
-    bottom: 5vw; */
+    grid-column: 1 / 6;
     animation: buddha-inactive 7s ease-out infinite forwards;
 }
 #buddha:hover {
     animation-play-state: paused;
 }
 #buddha img {
-    width: 85%;
+    width: 60%;
+    transform: translateY(-35%) translateX(-25%);
 }
 @keyframes buddha-inactive {
     0% {
@@ -298,6 +290,7 @@
 
 #shampoo {
     position: relative;
+    grid-column: 6 / 11;
     /* left: 2vw; */
     animation: shampoo-inactive 7s ease-in infinite forwards;
     transform-origin: center;
@@ -308,7 +301,8 @@
     animation-play-state: paused;
 }
 #shampoo img {
-    width: 70%;
+    width: 47%;
+    transform: translateX(-45%) translateY(-20%);
 }
 
 @keyframes shampoo-inactive {
@@ -341,20 +335,84 @@
 
 #blueman {
     position: relative;
-    width: 18%;
-    /* left: 12vw; */
+
+    grid-column: 11 / 16;
+    /* transform: translateX(75%) translateY(-25%); */
+
 
 }
 #blueman:hover {
     animation-play-state: paused;
 }
 #blueman img {
-    width: 100%;
+    width: 65%;
+    transform: translateY(-10%) translateX(10%);
 }
+
+.eyes {
+    position: absolute;
+    width: 21% !important;
+    display: none;
+}
+
+#eye1 {
+    top: 23%;
+    left: 21%;
+    transform: rotate(13deg);
+    animation: eye1 5s linear infinite forwards;
+}
+
+@keyframes eye1 {
+    0% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 1;
+    }
+    41% {
+        opacity: .4;
+    }
+    42% {
+        opacity: 1;
+    }
+    45% {
+        opacity: 1;
+    }
+    46% {
+        opacity: .4;
+    }
+    47% {
+        opacity: 1;
+    }
+}
+
+#eye2 {
+    top: 41%;
+    left: 60%;
+    transform: rotate(-13deg);
+    animation: eye2 4.5s linear infinite forwards;
+}
+
+
+@keyframes eye2 {
+    0% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    76% {
+        opacity: .4;
+    }
+    77% {
+        opacity: 1;
+    }
+}
+
 
 #giveup {
     position: relative;
-    width: 40%;
+    grid-column: 16 / 21;
     /* left: 15vw; */
     /* top: 5vw; */
     animation: giveup-inactive 6s linear infinite forwards;
@@ -365,8 +423,8 @@
 
 }
 #giveup img {
-    width: 40%;
-    height: 40%;
+    width: 50%;
+ 
 }
 
 @keyframes giveup-inactive {
@@ -415,72 +473,38 @@
 
 }
 
-.eyes {
-    position: absolute;
-    width: 25% !important;
-    
-}
-
-#eye1 {
-    top: 22%;
-    left: 18%;
-    transform: rotate(13deg);
-    animation: eye1 5s linear infinite forwards;
-}
-
-@keyframes eye1 {
-    0% {
-        opacity: 1;
-    }
-    40% {
-        opacity: 1;
-    }
-    41% {
-        opacity: .4;
-    }
-    42% {
-        opacity: 1;
-    }
-    45% {
-        opacity: 1;
-    }
-    46% {
-        opacity: .4;
-    }
-    47% {
-        opacity: 1;
-    }
-}
 
 
 
-#eye2 {
-    top: 40%;
-    left: 62%;
-    transform: rotate(-13deg);
-    animation: eye2 4.5s linear infinite forwards;
-}
 
-
-@keyframes eye2 {
-    0% {
-        opacity: 1;
+@keyframes blur-wobble {
+    0%, 100% {
+        filter: blur(0px);
+    }
+    30% {
+        filter: blur(3px);
+    }
+    50% {
+        filter: blur(0px);
+    }
+    60% {
+        filter: blur(0px);
+    }
+    65% {
+        filter: blur(4px);
+    }
+    62% {
+        filter: blur(2px);
     }
     75% {
-        opacity: 1;
+        filter: blur(2px);
     }
-    76% {
-        opacity: .4;
+    80% {
+        filter: blur(4px);
     }
-    77% {
-        opacity: 1;
+    85% {
+        filter: blur(0px);
     }
+
+
 }
-
-/* #question {
-    position: fixed;
-    top: 0px;
-    right: 0px;
-    width: 20%;
-
-} */

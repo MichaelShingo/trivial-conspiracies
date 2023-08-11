@@ -76,32 +76,40 @@ function App() {
           activeVideo={activeVideo}
           videoVisible={videoVisible}
         />
-        <div 
+        {/* <div 
           id="row-1" 
           className={imagesVisible ? 'flex-row animate-in' : 'flex-row animate-out'}
-        >
+        > */}
           
-          
+        <div className={imagesVisible ? 'grid-container animate-in' : 'grid-container animate-out'}>
           <ImageButton 
             id="freetime"
             source={freeTime}
             handleImageClick={handleImageClick}
           />
-          <img 
+          <ImageButton
+            id="title-image"
+            source={title}
+            handleImageClick={() => {
+              setInterviewVisible(true); 
+              setImagesVisible(false);
+            }}
+          />
+          {/* <img 
             id="title-image" 
             src={title}
             onClick={() => {
               setInterviewVisible(true); 
               setImagesVisible(false);
             }}
-          />
+          /> */}
           <ImageButton
             id="phone"
             source={phone}
             handleImageClick={handleImageClick}
           />
-        </div>
-        <div className={imagesVisible ? 'flex-row animate-in' : 'flex-row animate-out'} id="row-2">
+        {/* </div> */}
+        {/* <div className={imagesVisible ? 'flex-row animate-in' : 'flex-row animate-out'} id="row-2"> */}
             <ImageButton 
                 id="question"
                 source={question}
@@ -128,8 +136,8 @@ function App() {
               source={nectarine}
               handleImageClick={handleImageClick}
             />
-        </div>
-        <div className={imagesVisible ? 'flex-row animate-in' : 'flex-row animate-out'} id="row-3">
+        {/* </div> */}
+        {/* <div className={imagesVisible ? 'flex-row animate-in' : 'flex-row animate-out'} id="row-3"> */}
             <ImageButton
               id="buddha"
               source={buddah}
@@ -142,7 +150,7 @@ function App() {
             />
             <ImageButton 
               id="blueman"
-              source={bluemanNoEyes}
+              source={blueMan}
               handleImageClick={handleImageClick}
             >
               <img className="eyes" id="eye1" src={eyes}/>
@@ -154,6 +162,7 @@ function App() {
               handleImageClick={handleImageClick}
             />
         </div>
+        {/* </div> */}
       </div>
     </div>
   );

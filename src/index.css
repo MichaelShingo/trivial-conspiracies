@@ -112,49 +112,25 @@ textarea {
 
 
 #page-background {
-  background-color: navy;
   height: 100vh;
   width: 100vw;
-  overflow-y: scroll;
+  overflow-y: hidden;
   overflow-x: hidden;
+  background-color: black;
 }
 
-.flex-row {
+.grid-container {
   width: 100%;
-  display: flex;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 28% 35% 37%;
+  grid-template-columns: repeat(20, 5%);
+  min-height: 450px; 
+  max-height: 1500px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  /* background-color: navy; */
 }
-
-#row-1 {
-  background-color: blueviolet;
-  height: 26%;
-
-}
-#row-2 {
-  background-color: purple;
-  height: 37%;
-}
-
-#row-3 {
-  background-color: maroon;
-  height: 37%;
-}
-
-#question-container {
-
-}
-
-#question-container img {
-
-}
-
-
-
-
-
-
-
-
-
 
 
 .animate-out {
