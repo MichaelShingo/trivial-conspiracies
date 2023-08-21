@@ -48,6 +48,7 @@ const VideoView = ({ imagesVisible, handleVideoClose, activeVideo, videoVisible 
   
             <iframe 
                 ref={iframeRef}
+                title={urls[activeVideo]}
                 src={urls[activeVideo]} 
                 frameborder="0" 
                 allow="autoplay; fullscreen; picture-in-picture" 

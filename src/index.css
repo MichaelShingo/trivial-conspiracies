@@ -101,12 +101,15 @@ textarea {
   outline: none;
 }
 
+.App {
+  overflow-x: hidden !important;
+}
 
 #page-background {
   height: 100vh;
   width: 100vw;
-  overflow-y: hidden;
-  overflow-x: hidden;
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
   background-color: black;
 }
 
@@ -156,7 +159,7 @@ textarea {
 }
 
 ::-webkit-scroll-thumb:hover {
-  background: var(--color-gold-hover);
+  background-color: var(--color-gold-hover);
 }
 
 @keyframes image-out {

@@ -8,7 +8,7 @@ const ImageButton = ({source, id, handleImageClick, children }) => {
             onClick={() => handleImageClick(id)}
             className="image-container"
         >
-            <img src={source}/>
+            <img src={source} alt="Click button to see video."/>
             {children}
         </div>
      );

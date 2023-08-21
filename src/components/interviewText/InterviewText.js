@@ -1,5 +1,5 @@
 import interviewsArray from "./interviewsArray";
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import './interview.css';
 
 const InterviewText = () => {
@@ -40,7 +40,7 @@ const InterviewText = () => {
                 onClick={() => handleClick(i)}>{interviewNumbers[parseInt(i)]}
               </button>
           )
-          }
+          } else { return <></>}
           })}
       </div>
     </div>
