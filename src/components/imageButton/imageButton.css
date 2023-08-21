@@ -11,8 +11,6 @@
     height: 100%;
   }
 
-.image-container img {
-}
 
 .image-container:hover {
     filter: brightness(150%);
@@ -124,12 +122,23 @@
 #question {  
     width: 100%;
     grid-column: 1 / 5;
+    animation: stretchAnimation 11s infinite cubic-bezier(0.25, 0.1, 0.25, 1);
+    animation-delay: 1s, 2s, 3s; /* Adjust these values for irregular intervals */
 } 
 
 #question img {
-    width: 100%;
-    transform: translateX(25%) rotate(-10deg);
+    width: 80%;
+    transform: translateX(25%) rotate(-0deg);
 }
+
+@keyframes stretchAnimation {
+    0%, 100% {
+      transform: scaleY(100%) scaleX(100%);
+    }
+    35% {
+      transform: scaleY(109%) scaleX(95%);
+    }
+  }
 
 
 #pizza {
@@ -335,9 +344,8 @@
 
 #blueman {
     position: relative;
-
     grid-column: 11 / 16;
-    /* transform: translateX(75%) translateY(-25%); */
+    animation: bounceAnimation 5s infinite 3s ease-in-out;
 
 
 }
@@ -348,6 +356,16 @@
     width: 65%;
     transform: translateY(-10%) translateX(10%);
 }
+
+@keyframes bounceAnimation {
+    0%, 30%, 100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
 
 .eyes {
     position: absolute;
@@ -413,9 +431,7 @@
 #giveup {
     position: relative;
     grid-column: 16 / 21;
-    /* left: 15vw; */
-    /* top: 5vw; */
-    animation: giveup-inactive 6s linear infinite forwards;
+    animation: giveup-scale 6s linear infinite forwards;
 }
 #giveup:hover {
     animation-play-state: paused;
@@ -471,6 +487,51 @@
         filter: brightness(100%);
     }
 
+}
+
+@keyframes giveup-scale {
+    0% {
+        transform: scale(100%);
+    }
+    30% {
+        transform: scale(100%);
+    }
+    31% {
+        transform: scale(103%);
+    }
+    32% {
+        transform: scale(100%);
+    }
+    33% {
+        transform: scale(100%);
+    }
+    34% {
+        transform: scale(103%);
+    }
+    35% {
+        transform: scale(100%);
+    }
+    65% {
+        transform: scale(100%);
+    }
+    66% {
+        transform: scale(103%);
+    }
+    67% {
+        transform: scale(100%);
+    }
+    95% {
+        transform: scale(100%);
+    }
+    96% {
+        transform: scale(103%);
+    }
+    97% {
+        transform: scale(100%);
+    }
+    100% {
+        transform: scale(100%);
+    }
 }
 
 

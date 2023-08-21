@@ -11,15 +11,15 @@ const InterviewText = () => {
     3: '12', 4: '13', 5: '24', 6: '25', 7: '26'}
 
   const handleClick = (index) => {
-    textRef.current.style.animation = 'interview-transition 4s ease-in-out 1 forwards';
+    textRef.current.style.animation = 'interview-transition 2s ease-in-out 1 forwards';
     setActiveButton(index);
     setTimeout(() => {
       setText(interviewsArray[index]);
-    }, 2000);
+    }, 1000);
 
     setTimeout(() => {
       textRef.current.style.animation = 'none'
-    }, 4000);
+    }, 2000);
     
   }
 
@@ -28,18 +28,20 @@ const InterviewText = () => {
     <div id="interview-buttons">
       <div id="interview-selectors">
         {Object.keys(interviewNumbers).map(i => {
-          return (
-            <button 
-              style={{
-                transform: activeButton === i ? 'scale(140%)' : 'scale(100%)',
-                color: activeButton === i ? 'var(--color-gold-hover)' : 'var(--color-gold)'
-            }}
-        
-              id={i}
-              key={i}
-              onClick={() => handleClick(i)}>{interviewNumbers[parseInt(i)]}
-            </button>
-        )})}
+          if (i !== '5') {
+            return (
+              <button 
+                style={{
+                  transform: activeButton === i ? 'scale(140%)' : 'scale(100%)',
+                  color: activeButton === i ? 'var(--color-gold-hover)' : 'var(--color-gold)'
+              }}
+                id={i}
+                key={i}
+                onClick={() => handleClick(i)}>{interviewNumbers[parseInt(i)]}
+              </button>
+          )
+          }
+          })}
       </div>
     </div>
     <div ref={textRef} className="interview-container">

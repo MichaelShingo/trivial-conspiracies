@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
 /* Box sizing rules */
 *,
 *::before,
@@ -19,9 +19,9 @@ button {
   font-size: 1rem;
   cursor: pointer;
   text-align: center;
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-
 }
 
 
@@ -45,10 +45,7 @@ button:active {
   --default-transition: all 0.5s ease-in-out;
   --color-grey-1: #ebe7dc;
   --color-gold-dark-1: #746a57;
-  
   --color-gold-dark-2: #3d382e;
-  
-  
 }
 
 ::selection {
@@ -105,12 +102,6 @@ textarea {
 }
 
 
-
-
-
-
-
-
 #page-background {
   height: 100vh;
   width: 100vw;
@@ -144,6 +135,28 @@ textarea {
   animation: image-in 2.5s ease-in-out 1s 1 forwards;
   pointer-events: all;
 
+}
+
+::-webkit-scrollbar {
+  width: .5em;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-black);
+  border-radius: 0;
+  margin-block: .5em;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold-dark-1);
+  border-radius: 100vw;
+  /* box-shadow: inset 0px 0px 0px 5px #000000, 0px 0px 0px 5px #000000; */
+  border: 5px solid var(--color-black);
+}
+
+::-webkit-scroll-thumb:hover {
+  background: var(--color-gold-hover);
 }
 
 @keyframes image-out {
@@ -180,4 +193,3 @@ textarea {
   0% {opacity: 100%;}
   100% {opacity: 0%;}
 }
-/* media query for overflow-y if screen height is less than x */

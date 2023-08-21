@@ -1,23 +1,14 @@
-const creditsContent = <><p>It was summertime in the year 2020. We had all been living isolated, in the
-                deep, dead heat of the covid-19 pandemic. I was beginning to lose faith in the
-                prospects of filmmaking amidst this new covid-world. Then one day my friend
-                Shae Belenski sent me a draft of his writing in a document titled: “drunk.” It was
-                essentially a series of monologues, which Shae had written as “interviews” (read
-                these by clicking on the “Trivial Conspiracies” button.) He was interested in
-                filming some of these monologues and I jumped at the opportunity to adapt
-                his writing into a film...
+const creditsContent = <>
+        <div id="poster"></div>
+
+<p>It was summertime in the year 2020. We had been living isolated in the dead heat of the covid-19 pandemic and I was beginning to lose faith in the prospects of filmmaking in the new covid-world. One day my friend Shae Belenski sent me a draft of his writing in a document titled: “drunk.” It was essentially a series of monologues, which Shae had written as “interviews” (read these by clicking on the “Trivial Conspiracies” button.) He was interested in filming some of these monologues, and so we did!
+
             </p>
-            <p>For me, making this film was a creative escape from the scary reality of our
-                world, but also a way of processing this reality. Conspiracy theories revolving
-                around the pandemic and the 2020 presidential election were part of the
-                zeitgeist of these years and this project brought some healing levity to all that
-                harmful nonsense.
+            <p>For me, making these films was an escape from the scary reality of our world. Conspiracy theories revolving around the pandemic and the 2020 presidential election were part of the zeitgeist of these years, and this project brought some healing levity to all that harmful nonsense. 
+
             </p>
 
-            <p>I write this exactly 2 years after Philadelphia locked down. I am stuck at home,
-                sick with Covid-19. During my quarantine, I can’t help but reflect on the past
-                two years and feel lucky to be alive, vaccinated, and grateful for the privilege to
-                be creative with people amidst all the chaos.
+            <p>Now, exactly 2 years after Philadelphia locked down, I am stuck at home sick with Covid-19. During my quarantine, I can’t help but reflect on how lucky we are to be alive, vaccinated and grateful for the privilege to be creative with one another amidst the chaos.
             </p>
             <p>- Sam</p>
             <ul>
