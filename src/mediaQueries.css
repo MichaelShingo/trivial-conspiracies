@@ -8,6 +8,11 @@
         gap: 170px 0px;
         overflow-y: scroll !important;
     } 
+    
+
+  
+    
+
 
     
     
@@ -161,6 +166,7 @@
         overflow-y: scroll !important;
     }
 
+  
    
     
     .close-button{
@@ -205,6 +211,7 @@
     }
 }
 
+/* for wide horizontal */
 @media all and (max-height: 450px) {
     .page-container {
         padding: 3% 10% !important;
@@ -215,7 +222,7 @@
     .page-container li {
         font-size: .9rem !important;
     }
-    /* grid-container {
+    /* .grid-container {
         overflow-y: scroll !important;
     } */
     #page-background {

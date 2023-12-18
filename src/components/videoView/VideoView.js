@@ -37,7 +37,8 @@ const VideoView = ({ imagesVisible, handleVideoClose, activeVideo, videoVisible 
             className={videoVisible ? 'video-container video-visible' : 'video-container video-invisible'}
             style={{
                 transitionDelay: videoVisible ? '1s' : '1s',
-                zIndex: videoVisible ? '1' : '-1'
+                zIndex: videoVisible ? '1' : '-1',
+                backgroundColor: 'black'
             }}
         >
             <XMark 
