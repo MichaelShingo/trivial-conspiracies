@@ -1,6 +1,8 @@
 import './videoView.css';
 import { useEffect, useRef } from 'react';
 import { ReactComponent as XMark } from '../../img/xmark.svg';
+import Player from '@vimeo/player';
+
 
 
 const VideoView = ({ imagesVisible, handleVideoClose, activeVideo, videoVisible }) => {
@@ -26,8 +28,19 @@ const VideoView = ({ imagesVisible, handleVideoClose, activeVideo, videoVisible 
         setTimeout(() => {
             containerRef.current.style.visibility = 'visible';
         }, 1000)
+
+        if (iframeRef.current) {
+            const player = new Player(iframeRef.current);
+            player.on('ended', () => {
+                handleVideoClose();
+            });
+
+            return () => {
+                player.off('ended');
+            }
+        }
         
-    }, [])
+    }, [activeVideo, handleVideoClose])
 
 
     
@@ -46,15 +59,16 @@ const VideoView = ({ imagesVisible, handleVideoClose, activeVideo, videoVisible 
                 className="close-button-video"
 
             />
-  
-            <iframe 
-                ref={iframeRef}
-                title={urls[activeVideo]}
-                src={urls[activeVideo]} 
-                frameborder="0" 
-                allow="autoplay; fullscreen; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
+            {urls[activeVideo] &&
+                <iframe 
+                    ref={iframeRef}
+                    title={urls[activeVideo]}
+                    src={urls[activeVideo]} 
+                    frameborder="0" 
+                    allow="autoplay; fullscreen; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            } 
         </div>
      );
 }
